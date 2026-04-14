@@ -1,17 +1,17 @@
 from copy import deepcopy
 
+import cv2
+import pandas as pd
+
+from court_line_detector import CourtLineDetector
+from mini_court import MiniCourt
+from trackers import BallTracker, PlayerTracker
 from utils import (
+    draw_player_stats,
+    measure_distance,
     read_video,
     save_video,
-    measure_distance,
 )
-
-import cv2
-from mini_court import MiniCourt
-from trackers import PlayerTracker, BallTracker
-from court_line_detector import CourtLineDetector
-from utils import draw_player_stats
-import pandas as pd
 
 
 def main():
