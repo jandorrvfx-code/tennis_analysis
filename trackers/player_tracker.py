@@ -23,6 +23,7 @@ class PlayerTracker:
 
         return filtered_player_detections
 
+
     def choose_players(self, court_keypoints, player_dict):
         distances = []
         for track_id, bbox in player_dict.items():

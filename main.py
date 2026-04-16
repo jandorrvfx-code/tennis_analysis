@@ -16,8 +16,7 @@ from utils import (
 
 def main():
     # Read Video
-    input_video_path = "input_videos/input_video.mp4"
-    video_frames = read_video(input_video_path)
+    video_frames = read_video("input_videos/input_video.mp4")
 
     # Detect Players and Ball
     player_tracker = PlayerTracker("models/yolov8x.pt")
