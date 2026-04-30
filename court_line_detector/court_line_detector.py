@@ -5,7 +5,7 @@ import cv2
 
 class CourtLineDetector:
     def __init__(self, model_path):
-        self.model = models.resnet50(pretrained=False)
+        self.model = models.resnet50(weights=None)
         self.model.fc = torch.nn.Linear(self.model.fc.in_features, 14*2)
         self.model.load_state_dict(torch.load(model_path, map_location='cpu'))
 

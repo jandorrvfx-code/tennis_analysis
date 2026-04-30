@@ -1,3 +1,5 @@
+import os
+os.environ['OPENCV_LOG_LEVEL'] = 'SILENT'
 from copy import deepcopy
 
 import cv2
