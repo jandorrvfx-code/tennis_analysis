@@ -31,7 +31,6 @@ build/
 runs/
 
 # Data and Videos
-input_videos/
 *.mp4
 *.avi
 *.mkv
