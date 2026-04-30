@@ -21,8 +21,8 @@ def main():
     video_frames = read_video("input_videos/input_video.mp4")
 
     # Detect Players and Ball
-    player_tracker = PlayerTracker("models/yolov8x.pt")
-    ball_tracker = BallTracker("models/yolo5_last.pt")
+    player_tracker = PlayerTracker("models/players.pt")
+    ball_tracker = BallTracker("models/ball.pt")
 
     player_detections = player_tracker.detect_frames(
         video_frames,
@@ -37,7 +37,7 @@ def main():
     ball_detections = ball_tracker.interpolate_ball_positions(ball_detections)
 
     # Court Line Detector model
-    court_model_path = "models/keypoints_model.pth"
+    court_model_path = "models/court_lines.pth"
     court_line_detector = CourtLineDetector(court_model_path)
     court_keypoints = court_line_detector.predict(video_frames[0])
 
